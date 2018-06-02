@@ -1,48 +1,58 @@
 {
-  "id":"contract_sample",
-  "version":"0.0.1",
+  "id":"fintech01",
+  "version":"1.0.0",
   "auth":{
-    "name":"Theloop Dev Team",
-    "email":"dev@theloop.co.kr",
-    "org":"Theloop inc"
+    "name":"YOUR_TEAM_NAME",
+    "email":"YOUR_TEAM_EMAIL",
+    "org":"YOUR_ORGANIZATION"
   },
   "dependencies":{},
-  "description":"contract_sample",
-  "repository":{
-    "type":"git",
-    "url":"git@github.com:theloopkr/contract_sample.git"
-  },
+  "description":"YOUR_OWN_DESCRIPTION",
+  "repository":{},
   "homepage":"http://www.theloop.co.kr",
   "function":{
-    "query":[
-      {
-        "method":"get_user_contracts",
-        "params":{"tx_hash":"user_id"},
-        "description":"Issue Certificate"
-      }
-    ],
     "invoke":[
       {
-        "method":"propose",
-        "params":
-           {
-             "proposer": "propose_user_id" ,
-             "counterparties": [],
-             "content": "contract text",
-             "quorum": "(int)quorum"
-           }
-        ,
-        "description":"new member"
+        "method":"invoke_foo1",
+        "params": {
+          "key":"string",
+          "value":"string"
+        },
+        "description":"Example of function in invoke."
       },
       {
-        "method":"approve",
-        "params":{
-            "user_id":"string" ,
-            "contract_id":"string"
-          }
+        "method":"invoke_will",
+        "params": {
+          "key":"string",
+          "value":"string"
+        },
+        "description":"Example of function in invoke."
+      },
+      {
+        "method":"invoke_inhe",
+        "params": {
+          "key":"string",
+          "value":"string"
+        },
+        "description":"Example of function in invoke."
+      },
+      {
+        "method":"deleteData",
+        "params": {
+          "key":"string"
+        },
+        "description":"Example of function in invoke."
+      }
+    ],
+    "query":[
+      {
+        "method":"query_foo1",
+        "params": {
+          "key":"string"
+        },
+        "description":"Example of function in query."
       }
     ]
   },
-  "main":"contract_score"
-
+  "main":"fintech01"
 }
